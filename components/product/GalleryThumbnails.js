@@ -5,7 +5,10 @@ export default function GalleryThumbnails({ images }) {
             <div className="nc-product-thumbnails" >
                 { images.map(i => (
                    <div key={i.image_url} className="nc-product-image-container">
-                   <img className="nc-product-thumbnail" src={i.image_url} alt=""/>
+                   <Image 
+                    height={500}
+                    width={500}
+                    className="nc-product-thumbnail" src={i.image_url} alt=""/>
                </div>
                 ))
                 

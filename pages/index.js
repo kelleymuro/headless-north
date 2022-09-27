@@ -13,7 +13,7 @@ import Solution from '../components/Solution'
 
 export async function getStaticProps() {
   // Fetch data
-  const res = await fetch(`http://northheadless.local/wp-json/nc-data/v1/products?expand=product-images`);
+  const res = await fetch(`https://store.northplugins.com/wp-json/nc-data/v1/products?expand=product-images`);
   const data = await res.json()
 
 // Pass data to the page via props

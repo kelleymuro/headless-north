@@ -10,7 +10,7 @@ import GalleryThumbnails from "../../components/product/GalleryThumbnails";
 export async function getServerSideProps(context) {
     const slug = context.params.slug;
     // Fetch data
-    const res = await fetch(`http://northheadless.local/wp-json/nc-data/v1/products?filter=slug:eq:${slug}&expand=product-images`);
+    const res = await fetch(`https://store.northplugins.com/wp-json/nc-data/v1/products?filter=slug:eq:${slug}&expand=product-images`);
     const data = await res.json()
   
   // Pass data to the page via props
@@ -51,7 +51,7 @@ export async function getServerSideProps(context) {
           })
         }
 
-
+        console.log(data)
 
       return (
         <Layout>
@@ -67,7 +67,7 @@ export async function getServerSideProps(context) {
                             <p className="nc-product-category">{data.data[0].category}</p>
                             <div className="nc-price-container">
                                 <p className="nc-product-price">${parseFloat(data.data[0].base_price) * quantity}</p>
-                                <p className="nc-product-compare-price">${data.data[0].compare_price}</p>
+                                <p className="nc-product-compare-price">{!data.data[0].compare_price ? null : `$ ${data.data[0].compare_price}`}</p>
                             </div>
                             <div  className="qty-counter">
                                 <svg onClick={() => decreaseQuantity(1)} width="50" height="50" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
