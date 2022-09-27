@@ -12,7 +12,7 @@ import Link from 'next/link';
                 <div className="shoes-main">
                     <div className="row">
                         { shoes.data.map(s => (
-                            <div className="col-md-4 col-sm-6">
+                            <div key={s.name} className="col-md-4 col-sm-6">
                                 <div className="shoes-item">
                                    <Image
                                     src={s.product_images[0].image_url}
