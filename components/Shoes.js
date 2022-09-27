@@ -5,7 +5,7 @@ import Link from 'next/link';
   
   export default function ShoesCollection ({ shoes }) {
     return (
-        <section className="shoes-area">
+        <section id="products" className="shoes-area">
             <div className="container">
                 <div className="shoes-heading">
                 </div>

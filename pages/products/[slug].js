@@ -49,7 +49,7 @@ export async function getServerSideProps(context) {
         }
 
       return (
-        <Layout>
+        <Layout title={data.data[0].name} >
                 <div className="nc-container">
                     <div className="nc-gallery">
                        <GalleryThumbnails images={data.data[0].product_images} /> 

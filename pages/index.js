@@ -16,8 +16,21 @@ export async function getStaticProps() {
   const res = await fetch(`https://store.northplugins.com/wp-json/nc-data/v1/products?expand=product-images`);
   const data = await res.json()
 
-// Pass data to the page via props
-return { props: { data } }
+  // Pass data to the page via props
+  return { 
+      props: {
+        data 
+      },
+
+      // Next.js will attempt to re-generate the page:
+      // - When a request comes in
+      // - At most once every 10 seconds
+      revalidate: 50000
+    }
+
+   
+ 
+
 }
 
 export default function Home({ data }) {

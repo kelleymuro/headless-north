@@ -11,7 +11,6 @@ import  store  from '../store';
 
 export default function Nav() {
     const snap = useSnapshot(store.cartItem);
-    console.log(snap);
     return (
         <header className="header-area"> 
             <div className="header-main">
