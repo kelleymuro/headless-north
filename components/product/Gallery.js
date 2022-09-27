@@ -5,8 +5,8 @@ export default function Gallery({ images }) {
         <div className="nc-gallery-wrapper">
             <div className="nc-product-gallery" >
                 <Image 
-                width={50}
-                height={50}
+                width={1000}
+                height={1200}
                 className="nc-featured-image" src={images[0].image_url} alt="" />
                 
                 {/* { images.map(i => (
