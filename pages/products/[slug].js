@@ -41,14 +41,14 @@ export async function getServerSideProps(context) {
      
 
         const addToCart = () => {
-            localStorage.setItem('cartItem', {
-                name: data.data[0].name,
-                price: parseFloat(data.data[0].base_price)
-            })
-        //   store.cartItem.push({
-        //     name: data.data[0].name,
-        //     price: parseFloat(data.data[0].base_price)
-        //   })
+            // localStorage.setItem('cartItem', {
+            //     name: data.data[0].name,
+            //     price: parseFloat(data.data[0].base_price)
+            // })
+          store.cartItem.push({
+            name: data.data[0].name,
+            price: parseFloat(data.data[0].base_price)
+          })
         }
 
 
