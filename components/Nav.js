@@ -27,7 +27,7 @@ export default function Nav() {
                             <ul>
                                 <li><a href="#"><img src={search.src} alt=""/></a></li>
                                 <li><a href="#"><img src={user.src} alt=""/></a></li>
-                                <li><Link href="/cart"><img src={cart.src} alt=""/></Link><span>{snap.length}</span></li>
+                                <li class="cart-icon-container"><Link href="/cart"><img src={cart.src} alt=""/></Link><span class="cart-qty">{snap.length}</span></li>
                             </ul>
                         </div>
                     </div>

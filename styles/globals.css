@@ -3161,7 +3161,14 @@ Small Screen - Mobile
 		  z-index: 99
 	  }
 
-      
+  }
 
+  .cart-icon-container {
+    position: relative;
+  }
 
+  .cart-qty {
+    position: absolute;
+    top: -6px;
+    right: -10px;
   }
